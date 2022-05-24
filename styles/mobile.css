@@ -170,9 +170,10 @@ ul {
 }
 
 /* ---------- HERO Section------- */
-#hero {
+header#hero {
   display: flex;
   flex-direction: column;
+  margin-bottom: 136px;
 }
 
 .testimonials-section {
@@ -290,7 +291,7 @@ button.light-btn {
   position: relative;
   border: 1px solid #000000;
   border-radius: 26px;
-  padding: 14px 58px 14px 32px;
+  padding: 14px 50px 14px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -302,9 +303,53 @@ button.dark-btn {
   box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.1);
   border-radius: 26px;
   color: #fff;
-  padding: 14px 58px 14px 32px;
+  padding: 14px 50px 14px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   margin-right: 10px;
+}
+
+#container-for-free-course-and-imp-info #free-courses {
+  padding: 34px 32px;
+  background: linear-gradient(
+    107.95deg,
+    #3f3f3f 2.44%,
+    #353535 46.26%,
+    #000000 97.42%
+  );
+  border-radius: 12px;
+  color: var(--font-color-white);
+  height: 416px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+#free-courses h3 {
+  color: #e7b623;
+  margin-bottom: 26px;
+}
+
+#free-courses .courses {
+  height: 90%;
+  overflow-y: scroll;
+}
+
+#free-courses .courses ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+#free-courses .courses ul li img {
+  margin-right: 22px;
+}
+
+#free-courses .courses ul li h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
