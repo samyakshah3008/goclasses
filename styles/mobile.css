@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #fff;
+  --nav-background: #fff;
+  --font-color-heading: #000;
+  --font-color-paragraph: #2e2e2e;
+  --font-color-paragraph-light: #474748;
+  --font-color-white: #fff;
+  --orange-color: #f32316;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: var(--font-color-paragraph);
+  background: var(--background);
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+a {
+  text-decoration: none;
+}
+/* -------------- Designing Menu ----------------- */
+.menu {
+  padding: 20px 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--nav-background);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+  z-index: 3;
+}
+.menu .logo {
+  height: 39px;
+}
+#menu-open {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: block;
+  background: var(--orange-color);
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.menu .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu-items {
+  text-transform: capitalize;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  transform: translateX(100vw);
+  width: 90%;
+
+  transition: all 0.7s cubic-bezier(0, 1, 1, 1);
+  /* transition: width 1.7s cubic-bezier(0, 1, 1, 1); */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f1f1 100%);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+}
+#menu-items > a,
+#menu-items > button {
+  transform: translateX(150%);
+  transition: transform 0.7s cubic-bezier(0, 1, 1, 1);
+}
+
+#menu-items > a {
+  padding: 20px 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--font-color-heading);
+  border-bottom: 1px solid rgba(201, 197, 197, 0.31);
+}
+
+#menu-items > a:nth-child(7) {
+  border-bottom: 0px;
+  margin-bottom: 40px;
+}
+
+#menu-items > #login {
+  background: var(--orange-color);
+  box-shadow: 0px 4px 22px 1px rgba(131, 129, 129, 0.32);
+  border-radius: 30px;
+  padding: 18px 36px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+#menu-items.show-menu-items {
+  transform: translateX(0);
+  width: 100%;
+  opacity: 1;
+}
+#menu-items.show-menu-items > a,
+#menu-items.show-menu-items > button {
+  transform: translateX(0%);
+}
+
+@media (min-width: 760px) {
+  #menu-open {
+    display: none;
+  }
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  #menu-items {
+    position: static;
+
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    opacity: 1;
+    height: 100%;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  #menu-items > a:not(:last-child) {
+    margin-right: 6vw;
+  }
+
+  #menu-items > a {
+    margin-bottom: 0px;
+    flex-grow: 1;
+  }
+}
+
+/* ---------- HERO Section------- */
+#hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials-section {
+  order: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 30px;
+  padding: 34px 65px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 0.91) 50%,
+    rgba(255, 245, 245, 0) 128.08%
+  );
+}
+
+.testimonial > .youtube-link {
+  position: absolute;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.testimonial > .youtube-link img {
+  display: block;
+  margin: auto;
+}
+.testimonial > .youtube-link .rank {
+  position: absolute;
+  top: 30%;
+  /* transform: translate(110%, 0%); */
+  width: 30%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--font-color-heading);
+}
+
+.testimonial {
+  position: relative;
+}
+.main-section {
+  order: 2;
+}
