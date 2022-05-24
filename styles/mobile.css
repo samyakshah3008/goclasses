@@ -403,3 +403,25 @@ h3 {
 #important-info ul li img {
   margin-right: 22px;
 }
+
+/* --------Test Series------------ */
+
+#enroll-test-series {
+  padding: 60px 50px 60px 25px;
+  background: #feefef;
+  border-radius: 12px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 40px;
+}
+
+#enroll-test-series .main-heading {
+  margin-bottom: 1rem;
+}
+
+#enroll-test-series p {
+  margin-bottom: 2.5rem;
+}
