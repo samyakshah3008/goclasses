@@ -187,6 +187,7 @@ ul {
     rgba(255, 245, 245, 0.91) 50%,
     rgba(255, 245, 245, 0) 128.08%
   );
+  margin-bottom: 2rem;
 }
 
 .testimonial > .youtube-link {
@@ -218,4 +219,92 @@ ul {
 }
 .main-section {
   order: 2;
+}
+
+.main-section .notify span {
+  background: #6cb520;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  padding: 7px 9px;
+}
+.notify {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.course-description {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--font-color-paragraph-light);
+}
+
+.price {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--font-color-heading);
+  margin-top: 0.5rem;
+  margin-bottom: 22px;
+}
+.price .discount {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--orange-color);
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+button i {
+  position: absolute;
+  right: 10px;
+  background: var(--orange-color);
+  border-radius: 26px;
+  padding: 0.2rem;
+  color: #fff;
+}
+
+button.light-btn {
+  position: relative;
+  border: 1px solid #000000;
+  border-radius: 26px;
+  padding: 14px 58px 14px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+button.dark-btn {
+  position: relative;
+  background: #000000;
+  box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 26px;
+  color: #fff;
+  padding: 14px 58px 14px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 10px;
 }
