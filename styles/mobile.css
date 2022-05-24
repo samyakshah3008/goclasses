@@ -410,6 +410,7 @@ h3 {
   padding: 60px 50px 60px 25px;
   background: #feefef;
   border-radius: 12px;
+  margin-bottom: 4rem;
 }
 
 h2 {
@@ -424,4 +425,69 @@ h2 {
 
 #enroll-test-series p {
   margin-bottom: 2.5rem;
+}
+
+#individual-courses {
+  margin-bottom: 4rem;
+}
+#individual-courses h2,
+#individual-courses > p:first-of-type {
+  text-align: center;
+}
+
+#individual-courses > p:first-of-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 3rem;
+}
+
+#courses-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 30px 0px;
+}
+
+#courses-container .course {
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  padding: 14px 15px;
+  margin-right: 20px;
+  max-width: 65vw;
+}
+#courses-container .course:first-child {
+  margin-left: 20px;
+}
+
+#courses-container .course img {
+  margin-bottom: 1rem;
+}
+
+#courses-container .course p {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  color: var(--font-color-heading);
+}
+
+#courses-container .course h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 1.5rem;
+}
+#courses-container .course a {
+  display: flex;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #f32316;
+}
+#courses-container .course a i {
+  margin-left: 0.4rem;
 }
