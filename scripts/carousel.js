@@ -6,16 +6,21 @@ window.addEventListener("load", () => {
   // console.dir(coursesContainerEle.scrollLeft);
   let count = 0;
   let intervalID = setInterval(() => {
-    console.log("calling scroll");
+    // console.log("calling scroll");
     //translating coursesContainerEle
     // console.log(count);
     // coursesContainerEle.style.transform = `translateX(${-1 * count}px)`;
     coursesContainerEle.scrollLeft =
-      (coursesContainerEle.scrollLeft + 1) % coursesContainerEle.scrollWidth;
-    count = count + coursesElements[0].offsetWidth + 20;
-    if (count > coursesContainerEle.scrollWidth) {
-      count = 0;
-    }
+      (coursesContainerEle.scrollLeft + 1) %
+      (coursesContainerEle.scrollWidth - getWidth());
+    // console.log(
+    //   coursesContainerEle.scrollLeft,
+    //   coursesContainerEle.scrollWidth - getWidth()
+    // );
+    // count = count + coursesElements[0].offsetWidth + 20;
+    // if (count > coursesContainerEle.scrollWidth) {
+    //   count = 0;
+    // }
   }, 10);
 
   function clearScrolling() {
@@ -65,3 +70,13 @@ window.addEventListener("load", () => {
     yDown = null;
   }
 });
+
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
