@@ -1,22 +1,29 @@
 window.addEventListener("load", () => {
   let coursesContainerEle = document.querySelector("#courses-container");
   let coursesElements = document.getElementsByClassName("course");
-  console.dir(coursesContainerEle.getBoundingClientRect());
-  let dim = coursesContainerEle.getBoundingClientRect();
-  console.dir(coursesContainerEle.scrollLeft);
+  // console.dir(coursesContainerEle.getBoundingClientRect());
+  //   let dim = coursesContainerEle.getBoundingClientRect();
+  // console.dir(coursesContainerEle.scrollLeft);
   let count = 0;
-  setInterval(() => {
+  let intervalID = setInterval(() => {
     console.log("calling scroll");
     //translating coursesContainerEle
-    console.log(count);
-    coursesContainerEle.style.transform = `translateX(${-1 * count}px)`;
-    // coursesContainerEle.scrollLeft = (coursesContainerEle.scrollLeft + 1)% coursesContainerEle.scrollWidth;
+    // console.log(count);
+    // coursesContainerEle.style.transform = `translateX(${-1 * count}px)`;
+    coursesContainerEle.scrollLeft =
+      (coursesContainerEle.scrollLeft + 1) % coursesContainerEle.scrollWidth;
     count = count + coursesElements[0].offsetWidth + 20;
     if (count > coursesContainerEle.scrollWidth) {
       count = 0;
     }
-  }, 3000);
+  }, 10);
 
+  function clearScrolling() {
+    clearInterval(intervalID);
+  }
+  coursesContainerEle.addEventListener("mouseover", clearScrolling);
+  coursesContainerEle.addEventListener("click", clearScrolling);
+  coursesContainerEle.addEventListener("touchstart", clearScrolling);
   //detecting right swipe and left swipe
   coursesContainerEle.addEventListener("touchstart", handleTouchStart, false);
   coursesContainerEle.addEventListener("touchmove", handleTouchMove, false);
@@ -42,15 +49,15 @@ window.addEventListener("load", () => {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       /*most significant*/
       if (xDiff > 0) {
-        alert("right swipe");
+        console.log("right swipe");
       } else {
-        alert("left swipe");
+        console.log("left swipe");
       }
     } else {
       if (yDiff > 0) {
-        alert("down swipe");
+        console.log("down swipe");
       } else {
-        alert("up swipe");
+        console.log("up swipe");
       }
     }
     /* reset values */
