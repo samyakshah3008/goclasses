@@ -318,17 +318,15 @@
         </div>
       </section>
       <section id="FAQs">
-        <h3>Frequently Asked Questions</h3>
+        <h2>Frequently Asked Questions</h2>
         <div class="question-container">
           <div class="question">
-            <i></i>
             <p>
               Q1. Will this course also help me in cracking other competitive
               exams of Computer Science?
             </p>
           </div>
           <div class="answer">
-            <i></i>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. It is a long established fact that a reade distracted by
@@ -446,6 +444,19 @@
         menuItemsEle.classList.toggle("show-menu-items");
         menuOpenEle.innerText =
           menuOpenEle.innerText === "close" ? "menu" : "close";
+      });
+
+      let quesElems = document.querySelectorAll("#FAQs .question-container");
+      quesElems.forEach((ele) => {
+        ele.style.maxHeight =
+          ele.querySelector(".question").offsetHeight + 36 + "px";
+        ele.addEventListener("click", (evt) => {
+          console.log("clicked inside ques");
+          console.dir(ele);
+          let ansEle = ele.querySelector(".answer");
+          console.dir(ansEle);
+          ele.classList.toggle("show");
+        });
       });
     </script>
   </body>

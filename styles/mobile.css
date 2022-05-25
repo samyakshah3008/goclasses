@@ -499,6 +499,7 @@ h2 {
   border-radius: 12px;
   padding: 70px 32px 10px 32px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 #team h2 {
@@ -524,4 +525,44 @@ h2 {
   font-weight: 600;
   font-size: 22px;
   line-height: 33px;
+}
+
+#FAQs {
+  margin-bottom: 2rem;
+}
+
+#FAQs h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#FAQs .question-container {
+  background: #ffffff;
+  border: 0.6px solid #e6e6e6;
+  border-radius: 20px;
+  padding: 18px 22px 18px 50px;
+  margin-bottom: 1rem;
+  /* max-height: 50px; */
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+#FAQs .question-container .question p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+#FAQs .question-container .answer {
+  /* display: none; */
+  /* height: 0px; */
+  padding-top: 1rem;
+  transition: all 1s ease;
+}
+
+.show {
+  /* display: block !important; */
+  max-height: 1024px !important;
 }
