@@ -444,8 +444,9 @@ h2 {
 
 #courses-container {
   display: flex;
-  overflow-x: auto;
+  overflow-x: visible;
   padding: 30px 0px;
+  transition: all 1s ease;
 }
 
 #courses-container .course {
