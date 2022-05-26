@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
     <script src="./scripts/carousel.js"></script>
     <title>Go Classes</title>
   </head>
@@ -395,55 +397,110 @@
         </button>
       </section>
       <section id="testimonials">
-        <h3>Our students love what we do</h3>
+        <h2>Our <span class="orange">students</span> love what we do</h2>
         <p>
           Lorem Ipsum is simply dummy text printing and typesetting industry. It
           is a long established fact that.
         </p>
+        <div class="owl-carousel owl-theme">
+          <div class="review-container">
+            <div class="person">
+              <img src="./assets/PNG X1/Group 11.png" alt="" />
+              <div class="name-rating">
+                <p>Priyanka Yadav</p>
+                <div class="stars"></div>
+              </div>
+            </div>
+            <div class="review">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing typesetting
+                industry. It is a long established fact that a reade distracted
+                the readable content of a page when looking at its layout.
+              </p>
+            </div>
+          </div>
+          <div class="review-container">
+            <div class="person">
+              <img src="./assets/PNG X1/Group 11.png" alt="" />
+              <div class="name-rating">
+                <p>Rahul Sharma</p>
+                <div class="stars"></div>
+              </div>
+            </div>
+            <div class="review">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing typesetting
+                industry. It is a long established fact that a reade distracted
+                the readable content of a page when looking at its layout.
+              </p>
+            </div>
+          </div>
 
-        <div class="review-container">
-          <div class="person">
-            <img src="" alt="" />
-            <div class="name-rating">
-              <p>Priyanka Yadav</p>
-              <div class="stars"></div>
+          <div class="review-container">
+            <div class="person">
+              <img src="./assets/PNG X1/Group 11.png" alt="" />
+              <div class="name-rating">
+                <p>Priyanka Yadav</p>
+                <div class="stars"></div>
+              </div>
+            </div>
+            <div class="review">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing typesetting
+                industry. It is a long established fact that a reade distracted
+                the readable content of a page when looking at its layout.
+              </p>
             </div>
           </div>
-        </div>
-        <div class="review-container">
-          <div class="person">
-            <img src="" alt="" />
-            <div class="name-rating">
-              <p>Rahul Sharma</p>
-              <div class="stars"></div>
+          <div class="review-container">
+            <div class="person">
+              <img src="./assets/PNG X1/Group 11.png" alt="" />
+              <div class="name-rating">
+                <p>Rahul Sharma</p>
+                <div class="stars"></div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="review-container">
-          <div class="person">
-            <img src="" alt="" />
-            <div class="name-rating">
-              <p>Priyanka Yadav</p>
-              <div class="stars"></div>
-            </div>
-          </div>
-        </div>
-        <div class="review-container">
-          <div class="person">
-            <img src="" alt="" />
-            <div class="name-rating">
-              <p>Rahul Sharma</p>
-              <div class="stars"></div>
+            <div class="review">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing typesetting
+                industry. It is a long established fact that a reade distracted
+                the readable content of a page when looking at its layout.
+              </p>
             </div>
           </div>
         </div>
 
-        <button id="enroll" class="dark-btn">Enroll Now</button>
+        <button class="dark-btn">
+          Enroll Now <i class="material-icons">keyboard_arrow_right</i>
+        </button>
       </section>
       <footer></footer>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: false,
+          margin: 50,
+          nav: false,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 5,
+            },
+          },
+        });
+      });
       let menuOpenEle = document.getElementById("menu-open");
       let menuItemsEle = document.getElementById("menu-items");
       menuOpenEle.addEventListener("click", () => {
