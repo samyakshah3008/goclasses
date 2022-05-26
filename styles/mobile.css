@@ -544,7 +544,7 @@ h2 {
   margin-bottom: 1rem;
   /* max-height: 50px; */
   overflow: hidden;
-  transition: all 1s ease;
+  transition: max-height 0.5s ease;
 }
 
 #FAQs .question-container .question p {
@@ -555,14 +555,27 @@ h2 {
   color: #000000;
 }
 
+#FAQs .question-container .answer::before {
+  content: "";
+  border: 1.2px solid #f32316;
+  transform: rotate(90deg) translateY(45px) translateX(30px);
+  width: 47px;
+  position: absolute;
+}
+
 #FAQs .question-container .answer {
   /* display: none; */
   /* height: 0px; */
+  position: relative;
   padding-top: 1rem;
   transition: all 1s ease;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #474748;
 }
 
 .show {
   /* display: block !important; */
-  max-height: 1024px !important;
+  max-height: 500px !important;
 }
