@@ -541,7 +541,7 @@ h2 {
   border: 0.6px solid #e6e6e6;
   border-radius: 20px;
   padding: 18px 22px 18px 50px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   /* max-height: 50px; */
   overflow: hidden;
   transition: max-height 0.5s ease;
@@ -588,4 +588,9 @@ h2 {
 .show {
   /* display: block !important; */
   max-height: 500px !important;
+}
+
+#contact-us-btn {
+  margin: auto;
+  margin-bottom: 5rem;
 }
