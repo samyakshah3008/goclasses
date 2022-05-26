@@ -239,6 +239,7 @@ h1 {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
+  /* animation: animateTop0 2s ease; */
 }
 
 .course-description {
@@ -661,4 +662,20 @@ h2 {
   box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   padding: 55px 25px 25px 30px;
+}
+
+.fadeIn {
+  position: relative;
+  animation: animateTop0 2s ease;
+}
+
+@keyframes animateTop0 {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
 }
