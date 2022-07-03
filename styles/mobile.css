@@ -272,6 +272,7 @@ button.dark-btn i {
   justify-content: space-between;
 }
 .email-input i {
+  position: static;
   background: var(--orange-color);
   border-radius: 26px;
   padding: 0.2rem;
@@ -701,6 +702,17 @@ h2 {
 .fadeIn {
   position: relative;
   animation: animateTop0 2s ease;
+}
+
+#youtube-box {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes animateTop0 {

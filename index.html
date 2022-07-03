@@ -62,7 +62,7 @@
               <img src="./assets/PNG X1/Star 5.png" alt="" />
               <div class="rank">
                 <p>AIR 10</p>
-                <img src="./assets/PNG X1/youtube 5.png" alt="" />
+                <img src="./assets/PNG X1/youtube 5.png" alt="" data-youtubesrc="https://www.youtube.com/embed/86VUqcXo8Sc" />
               </div>
             </div>
           </div>
@@ -72,17 +72,17 @@
               <img src="./assets/PNG X1/Star 5.png" alt="" />
               <div class="rank">
                 <p>AIR 10</p>
-                <img src="./assets/PNG X1/youtube 5.png" alt="" />
+                <img src="./assets/PNG X1/youtube 5.png" alt="" data-youtubesrc="https://www.youtube.com/embed/86VUqcXo8Sc" />
               </div>
             </div>
           </div>
           <div class="testimonial">
             <img src="./assets/PNG X1/Group 28.png" alt="" />
             <div class="youtube-link">
-              <img src="./assets/PNG X1/Star 5.png" alt="" />
+              <img src="./assets/PNG X1/Star 5.png" alt=""  />
               <div class="rank">
                 <p>AIR 10</p>
-                <img src="./assets/PNG X1/youtube 5.png" alt="" />
+                <img src="./assets/PNG X1/youtube 5.png" alt="" data-youtubesrc="https://www.youtube.com/embed/86VUqcXo8Sc" />
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@
               <img src="./assets/PNG X1/Star 5.png" alt="" />
               <div class="rank">
                 <p>AIR 10</p>
-                <img src="./assets/PNG X1/youtube 5.png" alt="" />
+                <img src="./assets/PNG X1/youtube 5.png" alt="" data-youtubesrc="https://www.youtube.com/embed/86VUqcXo8Sc" />
               </div>
             </div>
           </div>
@@ -1142,6 +1142,9 @@
 
       </footer>
     </main>
+    <div id="youtube-box">
+
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -1209,7 +1212,30 @@
           iconElem.innerText =
             iconElem.innerText == "remove" ? "add" : "remove";
         });
+
+        document.addEventListener("click",(evt)=>{
+          console.log("clicked");
+          if(evt.target.id =="youtube-box"){
+            evt.target.style.display="none";
+            evt.target.innerHTML="";
+          }
+        })
+
+        document.addEventListener("click",(evt)=>{
+          if(evt.target.dataset.youtubesrc){
+            showYoutubeBox(evt.target.dataset.youtubesrc);
+          }
+        })
+
       });
+
+      function showYoutubeBox(videoSrc){
+        let youTubeEle = document.getElementById("youtube-box");
+        
+        let htmlString = `<iframe width="560" height="315" src="${videoSrc}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        youTubeEle.innerHTML = htmlString;
+        youTubeEle.style.display = "flex";
+      }
     </script>
   </body>
 </html>
