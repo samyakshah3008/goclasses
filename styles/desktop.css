@@ -1,0 +1,151 @@
+@media (min-width: 760px) {
+  .menu {
+    padding: 0px;
+  }
+  #menu-open {
+    display: none;
+  }
+  .container {
+    max-width: 1240px;
+    margin: auto;
+  }
+  #menu-items {
+    position: static;
+    z-index: 0;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    opacity: 1;
+    height: 100%;
+    /* width: 100%; */
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  #menu-items > #login {
+    padding: 12px 18px;
+  }
+
+  #menu-items > a {
+    border: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 32px;
+  }
+
+  #menu-items > a:nth-child(7) {
+    margin-bottom: 0px;
+    /* border-bottom: 2px solid #fff; */
+  }
+
+  #menu-items > a,
+  #menu-items > button {
+    transform: translateX(0%);
+    transition: transform 0.7s cubic-bezier(0, 1, 1, 1);
+  }
+
+  /* --------Hero section----------- */
+  header#hero {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 136px;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-section {
+    order: 0;
+    margin-right: 100px;
+    width: 50%;
+  }
+  h1 {
+    font-size: 58px;
+    line-height: 67px;
+  }
+  .course-description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  #container-for-free-course-and-imp-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  .scroll::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+  }
+
+  .scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+
+  .scroll::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  }
+
+  .scroll-dark::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .scroll-dark::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+
+  .scroll-dark::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
+  }
+  #enroll-test-series {
+    position: relative;
+    padding: 45px 70px;
+  }
+  #enroll-test-series .right {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: -30px;
+  }
+  #enroll-test-series .left {
+    width: 50%;
+  }
+
+  #courses-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 24px;
+    overflow: auto;
+  }
+
+  /* ----------------Team Section---------------- */
+  /* .team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  .team-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

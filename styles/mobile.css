@@ -139,36 +139,6 @@ ul {
   transform: translateX(0%);
 }
 
-@media (min-width: 760px) {
-  #menu-open {
-    display: none;
-  }
-  .container {
-    max-width: 1000px;
-    margin: auto;
-  }
-  #menu-items {
-    position: static;
-
-    transform: translateX(0);
-    transition: all 0.5s ease;
-    opacity: 1;
-    height: 100%;
-    width: auto;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  #menu-items > a:not(:last-child) {
-    margin-right: 6vw;
-  }
-
-  #menu-items > a {
-    margin-bottom: 0px;
-    flex-grow: 1;
-  }
-}
-
 /* ---------- HERO Section------- */
 header#hero {
   display: flex;
@@ -414,6 +384,10 @@ h3 {
   margin-bottom: 4rem;
 }
 
+#enroll-test-series .right {
+  display: none;
+}
+
 h2 {
   font-weight: 700;
   font-size: 33px;
@@ -546,12 +520,13 @@ h2 {
   /* max-height: 50px; */
   overflow: hidden;
   transition: max-height 0.5s ease;
+  position: relative;
 }
 
 #FAQs .question-container i {
   display: inline;
   position: absolute;
-  left: 35px;
+  left: 15px;
   background: white;
   box-shadow: none;
   color: var(--orange-color);
@@ -671,7 +646,7 @@ h2 {
 
 @keyframes animateTop0 {
   0% {
-    top: 20px;
+    top: 30px;
     opacity: 0;
   }
   100% {
