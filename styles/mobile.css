@@ -261,6 +261,65 @@ button i {
 button.dark-btn i {
   animation: vibrate 1s linear infinite both;
 }
+
+.email-input {
+  border: 1px solid #aaaaaa;
+  border-radius: 100px;
+  padding: 14px 20px;
+  max-width: 306px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.email-input i {
+  background: var(--orange-color);
+  border-radius: 26px;
+  padding: 0.2rem;
+  color: #fff;
+}
+input {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+input:focus {
+  outline: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 4rem 20px;
+}
+.footer-links .links a {
+  display: block;
+  color: #474748;
+}
+.footer-links {
+  margin-bottom: 2rem;
+}
+.subscribe {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe .logo {
+  margin-bottom: 2rem;
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  margin-bottom: 0.7rem;
+}
+
 @keyframes vibrate {
   0% {
     transform: translateX(0%);
