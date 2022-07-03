@@ -161,6 +161,10 @@ header#hero {
   margin-bottom: 2rem;
 }
 
+.testimonial > img {
+  width: 100%;
+}
+
 .testimonial > .youtube-link {
   position: absolute;
   bottom: -40px;
@@ -703,7 +707,9 @@ h2 {
   position: relative;
   animation: animateTop0 2s ease;
 }
-
+[data-youtubesrc] {
+  cursor: pointer;
+}
 #youtube-box {
   position: fixed;
   width: 100vw;
