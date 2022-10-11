@@ -1,0 +1,77 @@
+.wrapper {
+    width: 100%;
+
+}
+
+/* body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+} */
+
+.wrapper .carousel {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.carousel .card {
+    line-height: 250px;
+    text-align: center;
+    color: #fff;
+    font-size: 90px;
+    font-weight: bold;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .card-1 {
+    background-color: #ed1c24;
+}
+
+.carousel .card-2 {
+    background-color: #0072bc;
+}
+
+.carousel .card-3 {
+    background-color: #39b54a;
+}
+
+.carousel .card-4 {
+    background-color: #f26522;
+}
+
+.carousel .card-5 {
+    background-color: #630460;
+}
+
+.wrapper .owl-dots {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper .owl-dot {
+    height: 15px;
+    width: 45px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 5px;
+    border: 2px solid #0072bc !important;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+.wrapper .owl-dot:hover,
+.wrapper .owl-dot.active {
+    background-color: #0072bc !important;
+}
