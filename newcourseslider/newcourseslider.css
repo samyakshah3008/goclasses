@@ -16,14 +16,21 @@
 }
 
 .carousel .card {
-    line-height: 250px;
     text-align: center;
     color: #fff;
-    font-size: 90px;
     font-weight: bold;
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.line-height {
+    line-height: 250px;
+    font-size: 90px;
+}
+
+.margin-bottom {
+    margin-bottom: 6rem;
 }
 
 .carousel .card-1 {
@@ -46,7 +53,12 @@
     background-color: #630460;
 }
 
-.wrapper .owl-dots {
+.flex-display {
+    display: flex;
+    gap: 1rem;
+}
+
+/* .wrapper .owl-dots {
     text-align: center;
     margin-top: 40px;
     display: flex;
@@ -74,4 +86,13 @@
 .wrapper .owl-dot:hover,
 .wrapper .owl-dot.active {
     background-color: #0072bc !important;
+} */
+
+@media only screen and (max-width: 600px) {
+    .flex-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
