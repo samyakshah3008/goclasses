@@ -1,0 +1,134 @@
+.container {
+    padding: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    line-height: 24px;
+}
+
+/* #49a0eb secondary color option */
+
+:root {
+    --primary: #0d3344;
+    --primary-dark: #052634;
+    --secondary-special: #f32316;
+
+    --secondary-overlay: rgba(73, 160, 235, 0.7);
+    --secondary-focus: #285780;
+    --secondary-bg: rgba(73, 160, 235, 0.2);
+    --white: #fff;
+    --black: #000;
+    --off-white: #fcfcfc;
+    --text-color: #767d86;
+    --text-color-dark: #474646;
+    --text-color-secondary: #d9dbe1;
+    --lg-screen: 800px;
+    --shadow: 0 1rem 2rem hsla(0, 0%, 70.6%, 0.2);
+    --shadow-s: 0 0.5rem 1rem hsla(0, 0%, 70.6%, 0.1);
+    --pale-pink: #f3a39c;
+    --border-grey: #e4e5e7;
+    --swiper-navigation-size: 44px;
+    --swiper-theme-color: #007aff;
+}
+
+/* .tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.special-icon {
+    color: black;
+    font-size: 2.2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header-m {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header-l,
+.header-m,
+.header-s,
+.sub-header {
+    color: var(--primary);
+    line-height: 1.5em;
+}
+
+.section-special hr {
+    width: 96px;
+    background-color: var(--secondary-special);
+    border: 3px solid var(--secondary-special);
+    border-radius: 16px;
+    margin-top: 16px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.card-special {
+    padding: 1rem 0.5rem 2rem;
+    border-radius: 4px;
+    color: var(--text-color);
+
+}
+
+.feature .card-special .card-icon {
+    padding: 1rem 0 1.5rem;
+}
+
+.course-title {
+    color: var(--secondary-special);
+    margin-bottom: 0.5rem;
+}
+
+.header-s {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.text {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 800px) {
+    .section-special {
+        padding: 1rem;
+    }
+
+    .header-m {
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .section-special hr {
+        margin-top: 1.2rem;
+    }
+
+    .feature .tiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .header-s {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}
