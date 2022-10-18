@@ -13,6 +13,11 @@
     border-radius: 25px;
 }
 
+.small-special-img {
+    font-size: 16px;
+    width: 60px;
+}
+
 .card {
     border-radius: 25px;
     background-color: #FFF;
