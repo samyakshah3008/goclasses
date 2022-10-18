@@ -76,6 +76,11 @@
     object-fit: cover;
 }
 
+.all-questions {
+    display: flex;
+    gap: 5rem;
+}
+
 .name {
     font-size: 18px;
     font-weight: 500;
@@ -142,5 +147,10 @@
 
     .swiper-navBtn {
         display: none;
+    }
+
+    .all-questions {
+        flex-wrap: wrap;
+        gap: unset;
     }
 }
